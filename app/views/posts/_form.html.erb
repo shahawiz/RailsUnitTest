@@ -1,0 +1,11 @@
+<%= form_for @post, html: {class: "nifty_form"} do |f| %>
+  <div class="form-group">
+    
+    <%= f.text_field :title, class: 'form-control ttt', placeholder: 'Title...' %>
+    
+  </div>
+  <div class="form-group">
+    <%= f.text_area :content, rows: '5', class: 'form-control', placeholder: 'Content...' %>
+  </div>
+  <%= f.submit btn_title, class: 'btn btn-primary btn-block', id: 'btn-submit' %>
+<%end%>

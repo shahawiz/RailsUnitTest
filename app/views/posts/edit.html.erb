@@ -1,0 +1,17 @@
+
+<h1>Update Post</h1>
+<%if flash[:message]%>
+  <div class="alert alert-success"><%= flash[:message]%></div>
+<%end%>
+
+<%unless @post.errors.empty?%>
+  <div class="alert alert-danger">
+    <ul>
+    <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <%end%>
+    </ul>
+  </div>
+<%end%>
+
+<%= render 'form', btn_title: 'Update' %>
